@@ -12,7 +12,7 @@ class Solution {
     func getDecimalValue(_ head: ListNode?) -> Int {
         var result = 0
         var node = head
-        while (head != nil) {
+        while (node != nil) {
             result = result * 2 + (node?.val ?? 0)
             node = node?.next
         }
