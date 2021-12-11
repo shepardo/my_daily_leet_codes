@@ -20,8 +20,9 @@ impl Solution {
         let mut node = head;
         let mut result = 0;
         while (node != None) {
-            //result = result * 2 + *node.val;
-            node = node.as_ref().next;
+            let n = node.unwrap();
+            result = result * 2 + n.val;
+            node = n.next;
         }
         return result;
     }
@@ -44,3 +45,4 @@ error: aborting due to 2 previous errors
 // https://aloso.github.io/2021/04/12/linked-list.html
 // https://rust-unofficial.github.io/too-many-lists/first-layout.html
 // https://discuss.codecademy.com/t/iterate-through-linked-list/504446
+// https://learning-rust.github.io/docs/e3.option_and_result.html
